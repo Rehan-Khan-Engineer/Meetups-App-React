@@ -28,9 +28,7 @@ function AllMeetupsPage() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(
-      "https://react-getting-started-cd489-default-rtdb.firebaseio.com/meetups.json"
-    )
+    fetch("https://meetups-app-8c4ad-default-rtdb.firebaseio.com/meetups.json")
       .then((response) => response.json())
       .then((data) => {
         const helperArray = [];
@@ -61,6 +59,7 @@ function AllMeetupsPage() {
     <section>
       <h1>All Meetups page</h1>
       <MeetupList meetups={loadedMeetups} />
+      {/* <MeetupList meetups={DUMMY_DATA} /> */}
     </section>
   );
 }
